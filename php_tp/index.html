@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>TP Formulaire HTML</title>
+</head>
+<body class="container my-4">
+ 
+    <h1 class="text-center">Formulaire</h1>
+ 
+    <form action="traitement.php" method="post" class="col-md-8 offset-md-2">
+       
+        <div class="mb-3">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" id="nom" name="nom" class="form-control"
+                   required minlength = "3" maxlength ="50">
+        </div>
+       
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-control"
+                   required maxlength="100">
+        </div>
+ 
+        <div class="mb-3">
+            <label for="password" class="form-label">Mot de passe</label>
+            <input type="password" id="password" name="password" class="form-control"
+                   required minlength="8" maxlength="50">
+        </div>
+ 
+        <div class="mb-3">
+            <label class="form-label">Sexe</label>
+            <div class="form-check">
+                <input type="radio" id="sexe_h" name="sexe" value="H" class="form-check-input" required>
+                <label for="sexe_h" class="form-check-label">Homme</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" id="sexe_f" name="sexe" value="F" class="form-check-input">
+                <label for="sexe_f" class="form-check-label">Femme</label>
+            </div>
+        </div>
+ 
+        <div class="mb-3">
+            <label for="ville" class="form-label">Ville</label>
+            <select id="ville" name="ville" class="form-select" required>
+                <option value="">-- Choisissez une ville --</option>
+                <option value="Paris">Paris</option>
+                <option value="Lyon">Lyon</option>
+                <option value="Marseille">Marseille</option>
+                <option value="Lille">Lille</option>
+            </select>
+        </div>
+ 
+        <div class="mb-3">
+            <label class="form-label">Loisirs</label>
+            <div class="form-check">
+                <input type="checkbox" id="loisir_sport" name="loisirs[]" value="sport" class="form-check-input">
+                <label for="loisir_sport" class="form-check-label">Sport</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" id="loisir_lecture" name="loisirs[]" value="lecture" class="form-check-input">
+                <label for="loisir_lecture" class="form-check-label">Lecture</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" id="loisir_cinema" name="loisirs[]" value="cinema" class="form-check-input">
+                <label for="loisir_cinema" class="form-check-label">Cinéma</label>
+            </div>
+        </div>
+       
+        <div class="mb-3">
+            <label class="form-label">Animaux de compagnie</label>
+            <div class="form-check">
+                <input type="checkbox" id="animal_chien" name="animaux[]" value="chien" class="form-check-input">
+                <label for="animal_chien" class="form-check-label">Chien</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" id="animal_chat" name="animaux[]" value="chat" class="form-check-input">
+                <label for="animal_chat" class="form-check-label">Chat</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" id="animal_aucun" name="animaux[]" value="aucun" class="form-check-input">
+                <label for="animal_aucun" class="form-check-label">Aucun</label>
+            </div>
+        </div>
+ 
+        <button type="submit" class="btn btn-primary mt-3">Envoyer</button>
+    </form>
+   
+</body>
+</html>
